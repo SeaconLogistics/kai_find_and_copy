@@ -28,7 +28,7 @@ case  "$foundfilescount" in
 *)
   echo "Found: -$foundfilescount- copying first one only"
   read -p "Press enter to continue"
-  cp `grep -l -m1 $searchterm $searchpath` $targetpath
+  cp `grep -l -m1 $searchterm $searchpath|head -n1` $targetpath
   ;;
 esac
 
